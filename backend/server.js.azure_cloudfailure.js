@@ -16,7 +16,6 @@ console.log("router established");
 
 const password = encodeURIComponent("IvcAZYAWii0tr509XsHreWoUQ8rV00IVJ67k6VXdN73HJ2HU5vAmUuFKQAexhfyfqJEuBXWGE9ROGwBt9wFBFw==");
 const dbRoute = "mongodb://dougfoo:"+password+"@dougfoo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb";
-
 const MongoClient = mongo.MongoClient;
 
 MongoClient.connect(dbRoute, 
