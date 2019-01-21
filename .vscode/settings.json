@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "C:\\Users\\dougfoo\\Anaconda3\\python.exe",
+    "team.showWelcomeMessage": false,
+    "editor.formatOnSave": true,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pylintPath": "C:\\Users\\dougfoo\\Anaconda3\\scripts\\pylint.exe",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.linting.pylintEnabled": true
+}
