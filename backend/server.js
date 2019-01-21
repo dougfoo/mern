@@ -8,7 +8,7 @@ const API_PORT = 3001;
 const app = express();
 const router = express.Router();
 
-// this is our MongoDB database
+// this is our MongoDB database - AWS
 const dbRoute = "mongodb://dougfoo:onepage95@ds163014.mlab.com:63014/fooazure";
 
 // connects our back end code with the database
