@@ -3,26 +3,55 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
-
+const mongo = require('mongodb');
 const API_PORT = 3001;
 const app = express();
 const router = express.Router();
 
-// this is our MongoDB database
-const dbRoute = "mongodb://dougfoo:onepage95@ds163014.mlab.com:63014/fooazure";
+console.log("router established");
 
-// connects our back end code with the database
-mongoose.connect(
-  dbRoute,
-  { useNewUrlParser: true }
-);
+// this is our MongoDB database
+// const dbRoute = "mongodb://jelo:a9bc839993@ds151382.mlab.com:51382/jelotest";
+// const dbRoute = "mongodb://dougfoo:IvcAZYAWii0tr509XsHreWoUQ8rV00IVJ67k6VXdN73HJ2HU5vAmUuFKQAexhfyfqJEuBXWGE9ROGwBt9wFBFw==@dougfoo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb";
+
+const password = encodeURIComponent("IvcAZYAWii0tr509XsHreWoUQ8rV00IVJ67k6VXdN73HJ2HU5vAmUuFKQAexhfyfqJEuBXWGE9ROGwBt9wFBFw==");
+const dbRoute = "mongodb://dougfoo:"+password+"@dougfoo.documents.azure.com:10255/?ssl=true&replicaSet=globaldb";
+
+const MongoClient = mongo.MongoClient;
+
+MongoClient.connect(dbRoute, 
+    { useNewUrlParser: true }, 
+    function (err, client) {
+        if (err != null) console.log(err);
+        console.log(client);
+    // const adminDb = client.db('foodatabase').admin();
+    // // List all the available databases
+    // adminDb.listDatabases(function (err, dbs) {
+    //     console.log(dbs.databases.length);
+    //     console.log(dbs.databases);
+    //     client.close();
+    // });
+});
+
+// problems w/ Mongoose so i deleted
+
+/*
+mongoose.connect('mongodb://dougfoo.documents.azure.com:10255/foodatabase?ssl=true&replicaSet=globaldb', {
+    auth: {
+        user: 'dougfoo',
+        password: 'IvcAZYAWii0tr509XsHreWoUQ8rV00IVJ67k6VXdN73HJ2HU5vAmUuFKQAexhfyfqJEuBXWGE9ROGwBt9wFBFw%3D%3D',
+    }
+}).catch (err => {
+    console.log(err);
+});
 
 let db = mongoose.connection;
+console.log("db connected");
 
 db.once("open", () => console.log("connected to the database"));
 
-// checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+*/
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
