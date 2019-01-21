@@ -1,0 +1,19 @@
+[
+  {
+    "id": "/subscriptions/7a2efedb-22fb-4344-bf58-c4b1a17f440a/resourceGroups/cosmosdbgroup/providers/Microsoft.Resources/deployments/Microsoft.Azure.CosmosDB-20190120185217/operations/A14F55A0CF492AEC",
+    "operationId": "A14F55A0CF492AEC",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Running",
+      "timestamp": "2019-01-20T23:54:16.1466737Z",
+      "duration": "PT6.1851544S",
+      "trackingId": "13ac19b4-ef1e-40f4-b508-51add92a1d99",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/7a2efedb-22fb-4344-bf58-c4b1a17f440a/resourceGroups/cosmosdbgroup/providers/Microsoft.DocumentDb/databaseAccounts/dougfoo",
+        "resourceType": "Microsoft.DocumentDb/databaseAccounts",
+        "resourceName": "dougfoo"
+      }
+    }
+  }
+]
