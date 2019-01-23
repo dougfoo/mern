@@ -1,10 +1,11 @@
 import azure.cosmos.cosmos_client as cosmos_client
 
+'mongodb://dougfooaccount:v9OCE0pGtEhPtRmZFiviZt7iLQovOVpuf5Vtr0ZzxHD3z0mcjTM9aoo31Jdf1ayW8smVT5hdY24CmHwYoSEhcg==@dougfooaccount.documents.azure.com:10255/?ssl=true&replicaSet=globaldb'
 config = {
-    'ENDPOINT': 'FILLME',
-    'PRIMARYKEY': 'FILLME',
-    'DATABASE': 'CosmosDatabase',
-    'CONTAINER': 'CosmosContainer'
+    'ENDPOINT': 'https://dougfooaccount.documents.azure.com:443/',
+    'PRIMARYKEY': 'v9OCE0pGtEhPtRmZFiviZt7iLQovOVpuf5Vtr0ZzxHD3z0mcjTM9aoo31Jdf1ayW8smVT5hdY24CmHwYoSEhcg==',
+    'DATABASE': 'CosmosDatabase2',
+    'CONTAINER': 'CosmosContainer2'
 }
 
 # Initialize the Cosmos client
