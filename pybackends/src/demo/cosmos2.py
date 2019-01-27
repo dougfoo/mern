@@ -29,9 +29,8 @@ options = {}
 options['enableCrossPartitionQuery'] = True
 options['maxItemCount'] = 2
 
-dblink = 'https://dougfooaccount.documents.azure.com:443/Test'
+dblink = 'https://dougfooaccount.documents.azure.com:443/'
 
-result_iterable = client.QueryItems(
-    dblink', query, options)
+result_iterable = client.QueryItems(dblink, query, options)
 for item in iter(result_iterable):
     print(item['message'])
