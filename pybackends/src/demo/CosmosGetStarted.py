@@ -1,11 +1,17 @@
 import azure.cosmos.cosmos_client as cosmos_client
+import sys
 
-'mongodb://dougfooaccount:v9OCE0pGtEhPtRmZFiviZt7iLQovOVpuf5Vtr0ZzxHD3z0mcjTM9aoo31Jdf1ayW8smVT5hdY24CmHwYoSEhcg==@dougfooaccount.documents.azure.com:10255/?ssl=true&replicaSet=globaldb'
+if (len(sys.argv)) != 2:
+    print('need db/container name as arg')
+    sys.exit()
+name = sys.argv[1]
+
+
 config = {
     'ENDPOINT': 'https://dougfooaccount.documents.azure.com:443/',
     'PRIMARYKEY': 'v9OCE0pGtEhPtRmZFiviZt7iLQovOVpuf5Vtr0ZzxHD3z0mcjTM9aoo31Jdf1ayW8smVT5hdY24CmHwYoSEhcg==',
-    'DATABASE': 'CosmosDatabase2',
-    'CONTAINER': 'CosmosContainer2'
+    'DATABASE': 'CosmosDatabase'+name,
+    'CONTAINER': 'CosmosContainer'+name
 }
 
 # Initialize the Cosmos client
