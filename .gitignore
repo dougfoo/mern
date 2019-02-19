@@ -12,3 +12,5 @@ node_modules
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+env
+
