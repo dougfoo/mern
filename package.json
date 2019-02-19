@@ -1,23 +1,30 @@
 {
   "name": "mern",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "concurrently \"cd backend && node server.js\" \"cd client && npm start\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dougfoo/mern.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dougfoo/mern/issues"
-  },
-  "homepage": "https://github.com/dougfoo/mern#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "antd": "^3.7.3",
+    "axios": "^0.18.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
+  },
+  "engines": {
+    "node": "11.6.0",
+    "npm": "6.5.0-next.0"
+  },
+  "devDependencies": {
+    "react-cookies": "^0.1.0"
   }
 }

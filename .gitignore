@@ -2,6 +2,8 @@
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
 [Bb]in
+build
+node_modules
 [Ii]nclude
 [Ll]ib
 [Ll]ib64
