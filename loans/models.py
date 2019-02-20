@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Loan(models.Model):
+    id = models.DecimalField(decimal_places=0, max_digits=12, primary_key=True)
     name = models.CharField(max_length=40)
     toEmail = models.CharField(max_length=60)  # should be selected
     date = models.DateField(auto_now_add=True)
